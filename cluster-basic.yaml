@@ -18,8 +18,8 @@ spec:
     class: builtin-generic-v3.3.0
     controlPlane:
       metadata:
-       # annotations:
-         # run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-008876b474d03887e
+        annotations:
+          run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-vmi-dd35b63d5ec9d244f
       replicas: 1
     variables:
       - name: vmClass
@@ -39,7 +39,7 @@ spec:
       machineDeployments:
         - class: node-pool
           metadata:
-            #annotations:
-              #run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-008876b474d03887e
+            annotations:
+              run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-dd35b63d5ec9d244f
           name: argo-example
           replicas: 1
