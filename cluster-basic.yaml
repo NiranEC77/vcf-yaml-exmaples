@@ -17,6 +17,9 @@ spec:
   topology:
     class: builtin-generic-v3.3.0
     controlPlane:
+      metadata:
+        annotations:
+          run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-6390ffec0c40310b5
       replicas: 1
     variables:
       - name: vmClass
@@ -35,6 +38,9 @@ spec:
     workers:
       machineDeployments:
         - class: node-pool
+          metadata:
+            annotations:
+              run.tanzu.vmware.com/resolve-os-image: os-image-id=vmi-6390ffec0c40310b5
           name: argo-example
           replicas: 1
 
