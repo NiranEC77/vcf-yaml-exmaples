@@ -2,7 +2,7 @@ apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
   name: dev-cluster
-  namespace: tkg-cluster-ns
+  namespace: ns01
 spec:
   clusterNetwork:
     pods:
