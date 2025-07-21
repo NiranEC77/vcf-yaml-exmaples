@@ -1,0 +1,21 @@
+apiVersion: cluster.x-k8s.io/v1beta1
+kind: Cluster
+metadata:
+  name: dev-cluster
+  namespace: tkg-cluster-ns
+spec:
+  clusterNetwork:
+    pods:
+      cidrBlocks: ["100.96.0.0/11"]
+    services:
+      cidrBlocks: ["100.64.0.0/13"]
+  topology:
+    class: tkg-vsphere-default-v1.28.2  # ClusterClass name
+    version:  v1.32.0---vmware.6-fips-vkr.2
+    controlPlane:
+      replicas: 1
+    workers:
+      machineDeployments:
+        - class: node-pool
+          name: md-0
+          replicas: 1
