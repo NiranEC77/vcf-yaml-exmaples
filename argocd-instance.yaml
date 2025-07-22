@@ -12,4 +12,5 @@ spec:
     service:
       type: LoadBalancer
   redis:
-    image:  harbor-wld.vcf.lab/niran/redis@sha256:6344a78bf6b62c2200ff873d7a3dde0b60db9b5a91c87b1efbc9130e1ac964d7
+      repository: harbor-wld.vcf.lab/niran/redis
+      digest: sha256:6344a78bf6b62c2200ff873d7a3dde0b60db9b5a91c87b1efbc9130e1ac964d7
