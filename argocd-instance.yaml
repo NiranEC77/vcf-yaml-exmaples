@@ -12,6 +12,4 @@ spec:
     service:
       type: LoadBalancer
   redis:
-    image:
-      repository: harbor-wld.vcf.lab/niran/redis
-      tag: "7.2.4"
+    image: harbor-wld.vcf.lab/niran/redis:7.2.4
