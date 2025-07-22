@@ -11,3 +11,5 @@ spec:
   server:
     service:
       type: LoadBalancer
+    redis:
+    image: harbor-wld.vcf.lab/niran/redis:7.2.4
